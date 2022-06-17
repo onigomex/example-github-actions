@@ -1,8 +1,11 @@
-name: CD-dev
+name: CD-dev-1
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - master
 
 jobs:
   deploy:
