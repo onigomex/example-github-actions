@@ -1,0 +1,13 @@
+name: CD-dev
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy dev
+        run: echo "deploy dev"
+
