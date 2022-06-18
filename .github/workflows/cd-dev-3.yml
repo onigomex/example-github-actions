@@ -1,0 +1,15 @@
+name: CD-dev-3
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: >-
+      contains(fromJson('["opened", "synchronize", "reopened"]'), github.event.action) ||
+      (github.event.action == 'closed' &&  github.event.pull_request.merged == true && github.ref == 'master')
+    steps:
+      - name: deploy dev
+        run: echo "deploy dev"
