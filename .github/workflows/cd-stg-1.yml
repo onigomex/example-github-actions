@@ -1,0 +1,15 @@
+name: CD-stg-1
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: stg
+    steps:
+      - name: deploy stg
+        run: echo "deploy stg"
+
