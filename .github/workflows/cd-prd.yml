@@ -1,0 +1,18 @@
+name: CD-prd
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - 'release-*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: prd
+    steps:
+      - name: deploy prd
+        run: echo "deploy prd"
+
