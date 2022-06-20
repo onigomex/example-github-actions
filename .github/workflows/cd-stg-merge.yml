@@ -1,0 +1,15 @@
+name: CD-stg-merge
+
+on:
+  pull_request:
+    branches:
+      - master
+    types: [closed]
+
+jobs:
+  deploy-stg-merge:
+    if: github.event.pull_request.merged == true
+    uses: onigomex/example-github-actions/.github/workflows/cd.yml@reusing-workflows
+    with:
+      env: stg
+
