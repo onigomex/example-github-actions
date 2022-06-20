@@ -9,8 +9,6 @@ on:
 
 jobs:
   deploy-stg:
-    environment:
-      name: stg
     uses: onigomex/example-github-actions/.github/workflows/cd.yml@reusing-workflows
     with:
       env: stg
