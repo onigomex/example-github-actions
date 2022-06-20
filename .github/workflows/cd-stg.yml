@@ -1,0 +1,17 @@
+name: CD-stg
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-stg:
+    environment:
+      name: stg
+    uses: onigomex/example-github-actions/.github/workflows/cd.yml@reusing-workflows
+    with:
+      env: stg
+
