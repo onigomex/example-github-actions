@@ -1,31 +1,28 @@
 # example-github-actions
 ## Hello World
-- https://github.com/onigomex/example-github-actions/pull/2
+- https://github.com/onigomex/example-github-actions/pull/28
 
 
 
 ## Development by Environment
-- https://github.com/onigomex/example-github-actions/pull/21
+- https://github.com/onigomex/example-github-actions/pull/29
 
 
 
 ## Reusing workflows
-TODO
-
+- https://github.com/onigomex/example-github-actions/pull/30
 - [Reusing workflows - GitHub Docs](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 
 
 
 ## Customizing Actions
-TODO
-
+- TODO
 - [Finding and customizing actions - GitHub Docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions)
 
 
 
 ## Deploy to AWS
-TODO(Terraform, ecspresso) 
-
+- TODO(Terraform, ecspresso) 
 - [kayac/ecspresso: ecspresso is a deployment tool for Amazon ECS](https://github.com/kayac/ecspresso)
 
 
