@@ -1,12 +1,12 @@
 name: CD-dev-manual
 
 on:
-  workflow_dispatch:
-  # pull_request:
-  #   types: [opened, synchronize, reopened]
-  # push:
-  #   branches:
-  #     - master
+#   workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - master
 
 jobs:
   deploy-dev:
