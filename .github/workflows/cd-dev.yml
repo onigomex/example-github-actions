@@ -1,0 +1,17 @@
+name: CD-dev-manual
+
+on:
+  workflow_dispatch:
+  # pull_request:
+  #   types: [opened, synchronize, reopened]
+  # push:
+  #   branches:
+  #     - master
+
+jobs:
+  deploy-dev:
+    # uses: onigomex/example-github-actions/.github/workflows/cd.yml@reusing-workflows
+    uses: ./.github/workflows/cd.yml
+    with:
+      env: dev
+

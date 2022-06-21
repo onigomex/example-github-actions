@@ -1,0 +1,23 @@
+name: CD
+
+on:
+  workflow_call:
+    inputs:
+      env:
+        required: true
+        type: string
+        description: 'env (dev|stg|prd)'
+      environment:
+        required: false
+        type: string
+        description: 'Settings > Environments (stg|prd)'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment }}
+    steps:
+      - name: deploy ${{ inputs.env }}
+        run: echo "deploy ${{ inputs.env }}"
+
