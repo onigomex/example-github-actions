@@ -1,0 +1,16 @@
+name: CD-dev-self-repo
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-dev:
+    # uses: onigomex/example-github-actions/.github/workflows/cd.yml@reusing-workflows
+    uses: ./.github/workflows/cd.yml
+    with:
+      env: dev
+
