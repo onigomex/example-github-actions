@@ -1,0 +1,26 @@
+name: CD
+
+on:
+  workflow_call:
+    inputs:
+      env:
+        required: true
+        type: string
+        description: 'env (dev|stg|prd)'
+      environment:
+        required: false
+        type: string
+        description: 'Environment (stg|prd)'
+        # TODO: => 未設定でいけるならそうしたいので、試してみる。空白でも動くんのか？
+        # 動くなら、↑このままでいい。
+        # 動かないなら、必須にするが、存在しないやつを定義してスルーさせる。
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment }}
+    steps:
+      - name: deploy ${{ inputs.env }}
+        run: echo "deploy ${{ inputs.env }}"
+
